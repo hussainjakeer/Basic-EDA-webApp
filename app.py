@@ -33,6 +33,6 @@ if uploaded_file is not None:
     st.write(df)
     st.session_state.df = df
 
-
-st.dataframe(df)
-st.session_state.df = df 
+else:
+    st.dataframe(df)
+    st.session_state.df = df 

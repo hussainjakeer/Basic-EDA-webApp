@@ -19,17 +19,12 @@ dir_of_interest = os.path.join(FILE_DIR,'iris.csv')
 
 df = pd.read_csv(dir_of_interest)
 
-
-
 # uploading file by user
 
 st.header("Choose a CSV file")
 uploaded_file = st.file_uploader("", accept_multiple_files= False, type = 'csv')
 
-st.dataframe(df)
 
-
-st.session_state.df = df 
 
 if uploaded_file is not None:
 
@@ -38,4 +33,6 @@ if uploaded_file is not None:
     st.write(df)
     st.session_state.df = df
 
- 
+
+st.dataframe(df)
+st.session_state.df = df 
